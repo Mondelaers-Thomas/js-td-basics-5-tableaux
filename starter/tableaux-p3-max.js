@@ -11,3 +11,21 @@ Aide :
   - Si la valeur courante est supérieure à 'max', elle devient le nouveau 'max'.
 - Affichez le résultat.
 */
+let tableauxP3Max = [3, 11, 7, 2, 9, 10];
+let max = 0;
+
+tableauxP3Max.join(', ');
+function maxNumber(tableau) {
+    for(let i = 0; i < tableau.length; i++){
+        if(tableau[i] > max){
+            max = tableau[i];
+        }
+    }
+}
+maxNumber(tableauxP3Max);
+console.log(`La plus grande valeur de mon tableau est ${max}`);
+
+tableauxP3Max.splice(2, 1, 90);
+
+maxNumber(tableauxP3Max);
+console.log(`La plus grande valeur de mon tableau est ${max}`);
